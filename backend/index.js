@@ -17,7 +17,7 @@ mongoose.set('strictQuery', false);
 mongoose.connect(
     "mongodb+srv://sarthak31:SEqvslMQ3cItFdOm@cluster0.6vq59v8.mongodb.net/?retryWrites=true&w=majority"
 )
-.then(() => app.listen(5000))
+.then(() => app.listen(0000))
 .then(() => console.log("succ"))
 .catch((err) => console.log(err))
 //SEqvslMQ3cItFdOm
