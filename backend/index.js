@@ -18,6 +18,9 @@ mongoose.connect(
 .then(() => console.log("succ"))
 .catch((err) => console.log(err))
 //SEqvslMQ3cItFdOm
+app.use("/", (req, res) => {
+    res.send("Welcome")
+})
 
 // User
 
