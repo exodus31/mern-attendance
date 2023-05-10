@@ -7,7 +7,7 @@ import jwt from 'jsonwebtoken';
 import cors from 'cors';
 
 const app = express();
-var port = 3000;
+var port =  process.env.PORT ;
 app.use(cors());
 app.use(express.json());
 app.use("/", (req, res) => {
