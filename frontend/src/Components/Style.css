@@ -1,0 +1,553 @@
+p{
+    margin: 0;
+    padding: 0;
+}
+label{
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: Poppins;
+}
+button:focus{
+    outline: none !important;
+}
+a:hover{
+    text-decoration: none;
+}
+/* LANDING */
+.landing{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;               
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='760' preserveAspectRatio='none' viewBox='0 0 1440 760'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1010%26quot%3b)' fill='none'%3e%3crect width='1440' height='760' x='0' y='0' fill='rgba(32%2c 80%2c 112%2c 1)'%3e%3c/rect%3e%3cpath d='M0%2c493.749C92.88%2c494.624%2c177.804%2c448.466%2c255.51%2c397.582C332.688%2c347.044%2c407.31%2c287.415%2c444.216%2c202.866C480.833%2c118.98%2c472.59%2c24.505%2c457.788%2c-65.82C443.22%2c-154.719%2c414.656%2c-240.319%2c359.872%2c-311.831C302.786%2c-386.348%2c234.427%2c-472.602%2c140.817%2c-479.58C46.928%2c-486.578%2c-11.854%2c-374.488%2c-101.663%2c-346.233C-188.712%2c-318.846%2c-298.638%2c-378.006%2c-368.53%2c-319.333C-437.77%2c-261.207%2c-443.641%2c-153.389%2c-438.923%2c-63.108C-434.665%2c18.362%2c-374.524%2c81.426%2c-343.638%2c156.934C-311.065%2c236.566%2c-313.88%2c332.574%2c-252.436%2c392.798C-186.377%2c457.545%2c-92.494%2c492.878%2c0%2c493.749' fill='%231a405a'%3e%3c/path%3e%3cpath d='M1440 1249.267C1534.612 1241.527 1623.377 1218.585 1710.519 1180.935 1812.748 1136.767 1954.315 1116.7269999999999 1990.519 1011.414 2027.479 903.9010000000001 1905.8600000000001 807.112 1876.817 697.195 1852.325 604.5 1890.335 496.19 1833.905 418.68 1776.459 339.774 1673.032 312.678 1578.683 287.688 1486.337 263.229 1388.919 247.106 1298.1100000000001 276.767 1208.586 306.008 1151.191 385.875 1082.107 449.884 1003.736 522.498 874.512 570.951 865.683 677.426 856.753 785.118 993.153 845.336 1041.291 942.0840000000001 1087.057 1034.065 1058.071 1164.953 1139.4560000000001 1227.655 1220.665 1290.222 1337.825 1257.626 1440 1249.267' fill='%23266086'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1010'%3e%3crect width='1440' height='760' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");    
+    background-size: cover;
+}
+.landinghead{
+    margin-top: 250px;    
+}
+.landinghead h1{    
+    font-family: Kanit;
+    font-size: 100px;
+    color: white;
+    text-shadow: 1px 1px 5px black;
+}
+.btns{
+    margin-top: 40px;
+    display: flex;    
+    gap: 35px;
+}
+.btns2{
+    margin: auto;
+}
+.snbtn{
+    background-color: rgba(255,255,255,1);    
+    padding: 20px;
+    font-family: Poppins;
+    border-radius: 5px;    
+    transition: all 0.1s;
+    font-size: 30px;   
+    box-shadow: 3px 3px 10px black;    
+}
+.snbtn:hover{
+    cursor: pointer;
+    background-color: rgb(221, 221, 221);
+    transition: all 0.1s;
+}
+.logbtn{
+    background-color: rgba(255,255,255,1);
+    font-family: Poppins;
+    padding: 20px;
+    box-shadow: 3px 3px 10px black;
+    border-radius: 5px;
+    transition: all 0.1s;
+    font-size: 30px;    
+}
+.snbtn:focus{
+    outline: none;
+    background-color: rgb(221,221,221);
+}
+.logbtn:focus{
+    outline: none;
+    background-color: rgb(221,221,221);
+}
+.logbtn:hover{
+    cursor: pointer;
+    background-color: rgb(221,221,221);
+    transition: all 0.1s;
+}
+
+/* SIGNUP */
+.signup-cont{
+    z-index: 99;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 40px;
+   
+}
+.signupform{  
+    font-family: Poppins;
+    border: solid 2px rgb(58, 58, 58);    
+    border-radius: 5px;  
+    position: relative;    
+    padding: 32px;        
+    background-color: rgb(16, 16, 16);
+    height: 640px;
+    color: whitesmoke;
+}
+.xbtn{
+    filter: invert(1);
+    position: absolute;        
+    width: 30px;
+    right: 5%;    
+    transition: all 0.2s;
+}
+.xbtn:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+.datax{       
+    margin-top: 20px;
+}   
+.forminput{      
+    margin-top: 10px;  
+    width: 100%;    
+    height: 50px;
+    border-radius: 5px;
+    padding-left: 10px;    
+}
+.subbtn{
+    background-color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    transition: all 0.2s;
+}
+.subbtn:focus{
+    outline: none;
+    background-color: rgb(221,221,221);
+}
+.subbtn:hover{
+    background-color: transparent;
+    color: white;
+    border: solid 1px whitesmoke;
+    transform: scale(1.1);
+}
+.showicon{
+    position: absolute;
+    right: 10%;
+    top:58.5%;
+    filter: invert(1);
+}
+.showicon2{
+    position: absolute;
+    right: 10%;
+    top:74.5%;
+    filter: invert(1);
+}
+.showicon3{
+    position: absolute;
+    right: 10%;
+    top:44%;
+    filter: invert(1);
+}
+.showicon:hover{
+    cursor: pointer;
+}
+.showicon2:hover{
+    cursor: pointer;
+}
+.showicon3:hover{
+    cursor: pointer;
+}
+
+/* NAVBAR */
+.navtxt{
+    margin-left: 30px;
+}
+.navx{
+    font-family: Poppins;
+    width: 100%;
+    height: 60px;
+    background-color: rgb(222, 222, 222);
+    box-shadow: 0px 0px 15px black;
+    display: flex;
+    align-items: center;    
+}
+.logoutbtn{    
+    margin-left: auto;  
+    margin-right: 80px;
+    background-color: rgb(251, 55, 55);
+    color: white;
+    border: none;
+    padding: 8px;
+    border-radius: 4px;    
+    transition: all 0.2s;
+}
+.logoutbtn:hover{
+    background-color: rgb(209, 46, 46);
+    cursor: pointer;
+}
+.logoutbtn:focus{
+    background-color: rgb(209, 46, 46);
+    outline:none;
+}
+.profbtn{   
+    margin-left: auto; 
+    margin-right: 30px;
+    background-color: rgb(67, 67, 67);
+    color: white;
+    border: none;
+    padding: 8px;
+    border-radius: 4px;  
+    transition: all 0.2s;      
+}
+.profbtn:hover{
+    background-color: rgb(45, 45, 45);
+    cursor: pointer;
+}
+.profbtn:focus{
+    outline:none;
+    background-color: rgb(45, 45, 45);
+}
+.logoimg{
+    margin-left: 80px;
+    width: 50px;
+    height: 50px;
+    border-radius: 110px;
+}
+.logoimg:hover{
+    cursor: pointer;
+}
+.addcrh{
+    font-size: 40px;
+}
+.adcl{
+    transition: all 0.2s;
+    margin-left: 50px;
+    background-color: rgb(36, 81, 177);
+    color: white;
+    border: none;
+    padding: 8px;
+    border-radius: 4px;            
+}
+.adcl:hover{
+    background-color: rgb(30, 71, 160);
+    cursor: pointer;
+}
+.adcl:focus{
+    background-color: rgb(25, 58, 131);
+    outline: none;
+}
+/* HOME */
+.homecont{
+    font-family: Poppins;
+    padding: 0px 200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.cardcont{ 
+    padding-top: 10px;   
+    background-color: rgb(36, 36, 36);
+    color: white;
+    width: 20rem;
+    border-radius: 5px;
+    height: 11rem;
+    margin-top: 55px;
+    box-shadow: 3px 3px 10px black;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    padding-bottom: 15px;
+    height: 200px;
+}
+.cc{
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-top: 10px;
+}
+.btnx{    
+    padding: 10px;
+    border-radius: 5px;
+    border: none !important;
+    color:white;    
+}
+.btnx:hover{
+    cursor: pointer;
+}
+.btnent{
+    background-color: rgb(0, 147, 205);
+    transition: all 0.2s;
+}
+.btnent:hover{
+    background-color: rgb(14, 111, 150);
+}
+
+
+/* Viewclassroom*/
+.viewcont{
+    background-color: rgb(28, 33, 48);
+    color: white;
+    display: flex;    
+    flex-direction: column;
+    padding-left: 30px;    
+    border-radius: 5px;    
+    box-shadow: 2px 2px 10px black;
+}
+.buttonsx{
+    display: flex;
+    gap: 20px;
+}
+.btnxx{    
+    padding: 10px;
+    border: none;
+    color:white;
+    border-radius: 3px;
+    box-shadow: 2px 2px 10px black;
+}
+.adstbtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    margin-top: 20px; 
+}
+.endtxt{
+    align-self: center;
+    margin-left: auto;
+    padding-right: 30px;
+}
+.subdiv{
+    display: flex;
+}
+.btnaddst{
+   background-color: #e0e0e0; 
+   color: black !important;
+}
+.btnaddst:hover{
+    background-color: #bdbdbd;
+}
+.ccodex{
+    font-size: 40px;
+}
+.cnamex{
+    font-size: 20px;
+}
+
+/* ViewAttendance */
+.attentable{
+    width: 100%;    
+    border-radius: 8px;
+}
+.attentable td{
+    
+    padding: 5px;
+    text-align: center;
+    border-right: solid 1px rgb(194, 194, 194);        
+}
+.attentable td:first-child{
+    padding-left: 10px;
+    text-align: left;
+}
+.attentable tr:last-child{    
+    border-bottom: solid 1px rgb(194, 194, 194);
+}
+.attentable tr:first-child{    
+    border-top: solid 1px rgb(194, 194, 194);
+}
+.attentable th{
+    background-color: rgba(25, 170, 214, 0.667);
+    text-align: center;
+    padding: 5px;
+    border-right: solid 1px rgb(194, 194, 194);        
+}
+.backbtn{
+    left: 3%;
+    position: absolute;    
+}
+.backbtn button{
+    border-radius: 5px;    
+    border:none;
+    padding: 8px;
+    background-color: black;
+    color: white;
+}
+
+
+/* Mark Attendance */
+.tabbtns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;    
+}
+.presbtn{
+    border: none;
+    background-color: #5cb85c;
+    color: white;
+    border-radius: 5px;
+    padding-bottom: 5px;
+}
+.absbtn{
+    border: none;
+    background-color: #d9534f;
+    color: white;
+    border-radius: 5px;
+    padding-bottom: 5px;
+}
+.confbtn{
+    margin-left: auto;
+    margin-right: auto;
+}
+.note{
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    font-style: italic;
+    color: #696969;
+}
+/* LOADER */
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.75s, visibility 0.75s;
+  }
+  
+  .loader--hidden {
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  .loader::after {
+    content: "";
+    width: 75px;
+    height: 75px;
+    border: 15px solid #dddddd;
+    border-top-color: rgb(0, 147, 205);
+    border-radius: 50%;
+    animation: loading 0.75s ease infinite;
+  }
+  
+  @keyframes loading {
+    from {
+      transform: rotate(0turn);
+    }
+    to {
+      transform: rotate(1turn);
+    }
+  }
+  
+
+@media (max-width:600px) {    
+    .navtxt{
+        font-size: 14px;
+        margin-left: 10px;
+    }
+    .landing{
+        height: 101vh;
+    }
+    .landinghead h1{
+        font-size: 70px;
+        padding: 0 20px;        
+        text-align: center;
+    }
+    .navx{          
+        justify-content: center;
+        align-items: center;
+    }
+    .adcl{
+        padding: 5px;
+        margin-left: 40px;
+        font-size: 12px;
+    }
+    .profbtn{
+        margin-left: 20px;
+        padding: 5px;        
+        font-size: 12px;        
+    }
+    .logoutbtn{   
+        margin-right: 10px;     
+        padding: 5px;        
+        font-size: 12px;
+    }
+    .logoimg{
+        margin-left: 10px;
+    }    
+    .homecont{
+        padding: 0px 50px;
+    }
+    .signupform{
+        width: 80% !important;
+    }
+    .forminput{
+        width: 100%;
+    }
+    .showicon{
+        right: 13%;
+    }
+    .showicon2{
+        right: 13%;
+    }
+    .showicon3{
+        right: 13%;
+    }
+    .addcrh{
+        font-size: 22px;
+    }
+    .xbtn{
+        width: 20px;        
+        top:3%
+    }
+    .ychead{
+        margin-top: 40px !important;
+    }
+    .buttonsx{
+        flex-direction: column;                
+    } 
+    .viewcont{
+        padding-left: 0 !important;
+    }   
+    .btnxx{
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }        
+    .btnma{
+        margin-left: auto;
+        margin-right: auto;        
+    }  
+    .btnma2{
+        width: 120% !important;
+    }    
+    .subdiv{
+        padding-left: 20px;
+    }
+    .endtxt{        
+        padding-right: 10px;
+        padding-left: 20px;
+    }
+    .ccodex{
+        font-size: 30px;
+    }    
+    .cnamex{
+        font-size: 16px;
+    }
+    .attentable td{
+        max-width: 90px;
+        overflow-x: scroll;
+    }
+}
