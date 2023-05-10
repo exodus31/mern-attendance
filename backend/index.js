@@ -10,6 +10,9 @@ const app = express();
 
 app.use(cors());
 app.use(express.json());
+app.use("/", (req, res) => {
+    res.send("Welcome")
+})
 mongoose.set('strictQuery', false);
 mongoose.connect(
     "mongodb+srv://sarthak31:SEqvslMQ3cItFdOm@cluster0.6vq59v8.mongodb.net/?retryWrites=true&w=majority"
@@ -18,9 +21,6 @@ mongoose.connect(
 .then(() => console.log("succ"))
 .catch((err) => console.log(err))
 //SEqvslMQ3cItFdOm
-app.use("/", (req, res) => {
-    res.send("Welcome")
-})
 
 // User
 
