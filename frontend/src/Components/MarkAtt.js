@@ -10,6 +10,7 @@ function MarkAtt() {
   const [load, setload] = React.useState(0);
   const [loadbtn, setloadbtn] = React.useState(0);
   const [updated, setupdated] = React.useState(0);
+  const [binary, setbinary] = React.useState([]);
 
   React.useEffect(() => {
     (async () => {
@@ -33,10 +34,20 @@ function MarkAtt() {
           setstud(res.data.students);
           setload(1);
           setloadbtn(0);
+          
+          res.data.students.map((st) => {
+            setbinary((prev) => [
+              ...prev,
+              {
+                name:st.name,
+                value:0,
+              }
+            ])
+          })           
         })
         .catch((err) => {
           console.log(err);
-        });
+        });            
     })();
   }, [updated]);// eslint-disable-line react-hooks/exhaustive-deps
 
@@ -81,12 +92,22 @@ function MarkAtt() {
   const handleConf = (e, id) => {
     e.preventDefault();
     axios
-    .put("http://localhost:5000/confirmed/"+id)
+    .post("http://localhost:5000/confirmed/"+id,{
+      binary,
+    })
     .then((res) => {
       console.log(res.data);
       navigate(-1);
     })
     .catch((err) => console.log(err))
+  }
+  
+  const handleclick = (e, id) => {
+    e.preventDefault();
+    let newArr = [...binary]
+    newArr[id].value ? newArr[id].value = 0 : newArr[id].value = 1
+    setbinary(newArr)
+    console.log(binary)
   }
 
   return load ? (
@@ -111,7 +132,23 @@ function MarkAtt() {
                 <td>{student.roll}</td>
                 <td>
                   <div className="tabbtns">
-                    {student.disabled ? [                
+                    {
+                      !binary[idx].value ? [
+                        <>
+                          <button className="presbtn" onClick={(e) => handleclick(e, idx)}>                            
+                            Mark As Present
+                          </button>
+                        </>
+                      ] : [
+                        <>
+                          <button className="absbtn" onClick={(e) => handleclick(e, idx)}>                            
+                              Change To Absent
+                          </button>
+                        </>
+                      ]
+                    }
+                    
+                    {/* {student.disabled ? [                
                     <>
                         {loadbtn ? [<button className="absbtn" disabled>
                             Change To Absent
@@ -128,7 +165,7 @@ function MarkAtt() {
                             Mark As Present
                         </button>]}
                     </>
-                    ]}
+                    ]} */}
                   </div>
                 </td>
               </tr>
@@ -137,7 +174,7 @@ function MarkAtt() {
         </tbody>
       </table>
       
-      <span className="note">*Please click confirm only if attendance for everyone has been marked and is final else click on BACK.</span>        
+      <span className="note" onClick={() => console.log(binary)}>*Please click confirm only if attendance for everyone has been marked and is final else click on BACK.</span>        
       <button className="confbtn mt-3 btn btn-primary" onClick={(e) => handleConf(e, id)}>Confirm</button>      
       
     </div>

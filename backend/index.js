@@ -7,17 +7,14 @@ import jwt from 'jsonwebtoken';
 import cors from 'cors';
 
 const app = express();
-var port =  process.env.PORT || 3000 ;
+
 app.use(cors());
 app.use(express.json());
-app.use("/", (req, res) => {
-    res.send("Welcome")
-})
 mongoose.set('strictQuery', false);
 mongoose.connect(
     "mongodb+srv://sarthak31:SEqvslMQ3cItFdOm@cluster0.6vq59v8.mongodb.net/?retryWrites=true&w=majority"
 )
-.then(() => app.listen(port, '0.0.0.0'))
+.then(() => app.listen(5000))
 .then(() => console.log("succ"))
 .catch((err) => console.log(err))
 //SEqvslMQ3cItFdOm
@@ -367,8 +364,9 @@ app.put("/updatestudentabs/:id", async (req, res) => {
     return res.status(200).json({student})
 })
 
-app.put("/confirmed/:id", async (req, res) => {
+app.post("/confirmed/:id", async (req, res) => {
     const id = req.params.id;
+    const {binary} = req.body;
     let students;
     let room;
     try{
@@ -377,11 +375,11 @@ app.put("/confirmed/:id", async (req, res) => {
     }catch(err){
         console.log(err)
     }
+    let idx=0;
     students.map(async (student) => {
-        if(student.disabled){
-            student.disabled = 0;
-            await student.save();
-        } 
+        student.attendance += binary[idx].value;
+        idx++;
+        await student.save();
     })    
     room.days=room.days+1;
     await room.save();
