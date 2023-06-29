@@ -32,7 +32,7 @@ function MarkAtt() {
           setstud(res.data.students);
           setload(1);        
           
-          res.data.students.map((st) => {
+          res.data.students.map((st) => (
             setbinary((prev) => [
               ...prev,
               {
@@ -40,7 +40,7 @@ function MarkAtt() {
                 value:0,
               }
             ])
-          })           
+          ))           
         })
         .catch((err) => {
           console.log(err);
