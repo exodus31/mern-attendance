@@ -5,7 +5,7 @@ import Classroom from './models/Classroom.js';
 import Student from './models/Student.js';
 import jwt from 'jsonwebtoken';
 import cors from 'cors';
-
+const PORT = process.env.PORT || 5000
 const app = express();
 
 app.use(cors());
@@ -14,11 +14,10 @@ mongoose.set('strictQuery', false);
 mongoose.connect(
     "mongodb+srv://sarthak31:SEqvslMQ3cItFdOm@cluster0.6vq59v8.mongodb.net/?retryWrites=true&w=majority"
 )
-.then(() => app.listen(5000))
+.then(() => app.listen(PORT))
 .then(() => console.log("succ"))
 .catch((err) => console.log(err))
 //SEqvslMQ3cItFdOm
-
 // User
 
 app.get("/users", async (req, res) => {

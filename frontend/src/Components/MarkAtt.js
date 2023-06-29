@@ -7,9 +7,7 @@ function MarkAtt() {
   let navigate = useNavigate();
   const [data, setdata] = React.useState([]);
   const [stud, setstud] = React.useState([]);
-  const [load, setload] = React.useState(0);
-  const [loadbtn, setloadbtn] = React.useState(0);
-  const [updated, setupdated] = React.useState(0);
+  const [load, setload] = React.useState(0);   
   const [binary, setbinary] = React.useState([]);
 
   React.useEffect(() => {
@@ -32,8 +30,7 @@ function MarkAtt() {
         .then((res) => {
           console.log(res.data.students);
           setstud(res.data.students);
-          setload(1);
-          setloadbtn(0);
+          setload(1);        
           
           res.data.students.map((st) => {
             setbinary((prev) => [
@@ -49,45 +46,7 @@ function MarkAtt() {
           console.log(err);
         });            
     })();
-  }, [updated]);// eslint-disable-line react-hooks/exhaustive-deps
-
-  const handlepresclick = (e, id) => {
-    e.preventDefault();
-    console.log(updated)
-    setloadbtn(1)
-    axios
-      .put("http://localhost:5000/updatestudent/" + id)
-      .then((res) => {
-        console.log(res.data);
-        if (updated === 1) {
-          setupdated(0);
-        } else {
-          setupdated(1);
-        }
-        console.log(updated)
-      })
-      .catch((err) => console.log(err));
-  };
-
-  
-
-  const handleabsclick = (e, id) => {
-    e.preventDefault();
-    console.log(updated)
-    setloadbtn(1)
-    axios
-      .put("http://localhost:5000/updatestudentabs/"+id)
-      .then((res) => {
-        console.log(res.data);
-        if (updated === 1) {
-          setupdated(0);
-        } else {
-          setupdated(1);
-        }
-        console.log(updated)
-      })
-      .catch((err) => console.log(err));
-  };
+  }, []);// eslint-disable-line react-hooks/exhaustive-deps
 
   const handleConf = (e, id) => {
     e.preventDefault();
