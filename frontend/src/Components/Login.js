@@ -23,7 +23,7 @@ function Login(props) {
         const token = res.data.token;
         localStorage.setItem("token", token);
           
-        window.location.href = "/home";
+        window.location = "/home";
       } else {
         console.log(res.data)     
       }   
