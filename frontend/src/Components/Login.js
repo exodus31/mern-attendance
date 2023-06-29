@@ -22,8 +22,8 @@ function Login(props) {
       if (res.status === 200) {
         const token = res.data.token;
         localStorage.setItem("token", token);
-          
-        window.location = "/home";
+          console.log("succ")
+        window.location = "/homex";
       } else {
         console.log(res.data)     
       }   
