@@ -23,7 +23,7 @@ function Login(props) {
         const token = res.data.token;
         localStorage.setItem("token", token);
           
-        window.location.href = "/home";
+        window.location.href = "https://main--genuine-froyo-43a41c.netlify.app/home";
       } else {
         console.log(res.data)     
       }   
