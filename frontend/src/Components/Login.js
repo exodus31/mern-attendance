@@ -14,7 +14,7 @@ function Login(props) {
   const handlelogin = (e) => {
     e.preventDefault();
      
-    axios.post("http://localhost:5000/login",{
+    axios.post("https://mern-attendance.up.railway.app/login",{
         email:email,
         password:pwd,        
     })

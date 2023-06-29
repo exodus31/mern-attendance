@@ -11,7 +11,7 @@ function EditRoom(props) {
     e.preventDefault();
 
     await axios
-      .put(`http://localhost:5000/editroom`, {
+      .put(`https://mern-attendance.up.railway.app/editroom`, {
         roomid: props.idx,
         cname,
         ccode,

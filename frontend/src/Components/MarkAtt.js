@@ -13,7 +13,7 @@ function MarkAtt() {
   React.useEffect(() => {
     (async () => {
       axios
-        .get("http://localhost:5000/getroom/" + id)
+        .get("https://mern-attendance.up.railway.app/getroom/" + id)
         .then((res) => {
           console.log(res.data);
           setdata(res.data.room);
@@ -26,7 +26,7 @@ function MarkAtt() {
     ( async () => {
         
       axios
-        .get("http://localhost:5000/getstudents/" + id)
+        .get("https://mern-attendance.up.railway.app/getstudents/" + id)
         .then((res) => {
           console.log(res.data.students);
           setstud(res.data.students);
@@ -51,7 +51,7 @@ function MarkAtt() {
   const handleConf = (e, id) => {
     e.preventDefault();
     axios
-    .post("http://localhost:5000/confirmed/"+id,{
+    .post("https://mern-attendance.up.railway.app/confirmed/"+id,{
       binary,
     })
     .then((res) => {

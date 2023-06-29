@@ -10,7 +10,7 @@ function AddCroom(props) {
     const handleSubmit = (e) => {
         e.preventDefault();
                 
-        axios.post("http://localhost:5000/createroom", {
+        axios.post("https://mern-attendance.up.railway.app/createroom", {
             cname:name,
             ccode:code,
             userid:props.datax,

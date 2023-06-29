@@ -14,7 +14,7 @@ function Navbar() {
     
     React.useEffect(() => {
     ( async () => {
-        axios.get("http://localhost:5000/user", {
+        axios.get("https://mern-attendance.up.railway.app/user", {
         headers: { token: localStorage.getItem("token") },
         })
         .then((res) => {                                

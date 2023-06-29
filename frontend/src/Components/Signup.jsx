@@ -21,7 +21,7 @@ function Signup(props) {
       console.log("errr")
       return
     }    
-    axios.post("http://localhost:5000/register",{
+    axios.post("https://mern-attendance.up.railway.app/register",{
         name:name,
         email:email,
         password:pwd,        

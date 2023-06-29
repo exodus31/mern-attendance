@@ -13,7 +13,7 @@ function Home() {
   React.useEffect(() => {
     (async () => {     
       await axios
-        .get("http://localhost:5000/user", {
+        .get("https://mern-attendance.up.railway.app/user", {
           headers: { token: localStorage.getItem("token") },
         })
         .then((res) => {
@@ -28,7 +28,7 @@ function Home() {
     if (load) {
       (async () => {
         axios
-          .get("http://localhost:5000/getrooms/" + data.userid)
+          .get("https://mern-attendance.up.railway.app/getrooms/" + data.userid)
           .then((res) => {
             console.log(res.data.rooms);
             setrooms(res.data.rooms);

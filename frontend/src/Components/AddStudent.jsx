@@ -12,7 +12,7 @@ function AddStudent(props) {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        axios.post("http://localhost:5000/createstudent",{
+        axios.post("https://mern-attendance.up.railway.app/createstudent",{
             name,
             roll,
             roomid:props.roomid,

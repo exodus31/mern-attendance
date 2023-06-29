@@ -19,7 +19,7 @@ function ViewCroom() {
   React.useEffect(() => {
     (async () => {
       axios
-        .get("http://localhost:5000/getroom/" + id)
+        .get("https://mern-attendance.up.railway.app/getroom/" + id)
         .then((res) => {
           console.log(res.data);
           setroom(res.data.room);
@@ -32,7 +32,7 @@ function ViewCroom() {
   React.useEffect(() => {
     (async () => {
       axios
-        .get("http://localhost:5000/getstudents/" + id)
+        .get("https://mern-attendance.up.railway.app/getstudents/" + id)
         .then((res) => {
           console.log(res.data.students);
           setdata(res.data.students);
@@ -58,7 +58,7 @@ function ViewCroom() {
   const handleDel = async (e, id) => {
     e.preventDefault();
 
-    await axios.delete(`http://localhost:5000/delstudent/${id}`)
+    await axios.delete(`https://mern-attendance.up.railway.app/delstudent/${id}`)
     .then((res) => {
       if(rel){
         setrel(0)
@@ -74,7 +74,7 @@ function ViewCroom() {
   const  handleDelcroom = async (e) => {    
     e.preventDefault();
     console.log(roomid)
-    await axios.delete(`http://localhost:5000/del/${id}`)
+    await axios.delete(`https://mern-attendance.up.railway.app/del/${id}`)
     .then((res) => {      
       navigate(-1)
     }).catch((err) => console.log(err))
