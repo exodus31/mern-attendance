@@ -59,10 +59,6 @@ The application should now be running locally at port 3000.
 - **React:** Frontend library for building user interfaces.
 - **Node.js:** JavaScript runtime environment.
 
-## Contributing
-
-Contributions are welcome! Please fork this repository and submit a pull request.
-
 ## GitHub Repository
 
 You can find the project repository [here](https://github.com/exodus31/mern-attendance.git).
