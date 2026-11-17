@@ -3,10 +3,25 @@
 This is a full-stack application designed to simplify the process of marking attendance. Built using the MERN stack (MongoDB, Express, React, Node.js), it allows users to sign up, log in, create classrooms, add students, and mark attendance for those students.
 
 
-<img width="640" height="340" alt="Login" src="https://github.com/user-attachments/assets/2df769c2-cb20-4e1e-b550-1bcc3b692fac" >
-<img width="640" height="340" alt="Landing" src="https://github.com/user-attachments/assets/fc9f8dac-76ba-42e6-b1b5-59c55bef8338" />
-<img width="640" height="339" alt="Classroom" src="https://github.com/user-attachments/assets/468052d1-9b30-4a93-9ce0-1b4b671d9e17" >
-<img width="640" height="340" alt="Attendance Marking" src="https://github.com/user-attachments/assets/c24189ac-e92c-45a5-9b17-6a66005a266c" />
+
+<table>
+  <tr>
+    <td align="center">
+      <img src="https://github.com/user-attachments/assets/2df769c2-cb20-4e1e-b550-1bcc3b692fac" width="480" alt="Login" />
+    </td>
+    <td align="center">
+      <img src="https://github.com/user-attachments/assets/fc9f8dac-76ba-42e6-b1b5-59c55bef8338" width="480" alt="Landing" />
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="https://github.com/user-attachments/assets/468052d1-9b30-4a93-9ce0-1b4b671d9e17" width="480" alt="Classroom" />
+    </td>
+    <td align="center">
+      <img src="https://github.com/user-attachments/assets/c24189ac-e92c-45a5-9b17-6a66005a266c" width="480" alt="Attendance Marking" />
+    </td>
+  </tr>
+</table>
 
 ## Features
 
